@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --line-main: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --attr: hsl(228, 45%, 44%);
+
+}
+
+html{
+
+    min-height: 100%;
+}
+
+body{
+
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--bg-main);
+    height: 100vh;
+}
+
+p,span{
+
+    font-size: 18px;
+}
+
+/*Component Styling */
+.container{
+
+    width: 25%;
+    max-width: 90%;
+}
+
+.card-component{
+
+    position: relative;
+    padding: 20px;
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.img-container{
+
+    background: url(images/image-equilibrium.jpg);
+    height: 280px;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.img-container:hover{
+
+    z-index: 0;
+    cursor: pointer;
+}
+
+.img-overlay{
+
+    max-width: 100%;
+    height: inherit;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+.img-overlay:hover{
+
+    background-color: var(--cyan);
+    opacity: 0.54%;
+}
+
+.fas{
+
+    position: absolute;
+    top: 27%;
+    left: 43%;
+    font-size: 40px;
+    color: var(--white);
+    opacity: 1;
+    z-index: 0;
+    cursor: pointer;
+
+}
+
+.fas:hover{
+
+
+    z-index: 2;
+}
+
+
+.card-title{
+
+    color: var(--white);
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.card-title:hover{
+
+    color: var(--cyan);
+}
+
+.card-description{
+
+    font-weight: 300;
+    color: var(--soft-blue);
+    margin-bottom: 20px;
+    font-size: 0.91em;
+
+}
+
+.card-info{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nft-price{
+
+    display: flex;
+    gap: 7px;
+    color: var(--cyan);
+
+}
+
+.nft-timer{
+
+    display: flex;
+    gap: 7px;
+    color: var(--cyan);
+    
+}
+
+hr{
+
+    margin-top: 15px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--line-main);
+    border: none;
+}
+
+.author-info{
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.author-contribution{
+    font-size: 0.85em;
+
+}
+
+.author-info img{
+
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--white);
+    border-radius: 100px;
+    background: center cover;
+}
+.author-info .author-link{
+
+    text-decoration: none;
+    color: var(--white);
+}
+
+.author-link:hover{
+
+    color: var(--cyan);
+}
+
+.price .days{
+
+    font-size: 00.85em;
+}
+
+footer{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    margin: 10px 0px;    
+}
+
+footer .attribution{
+
+    font-size: 11px;
+    color: var(--soft-blue);
+}
+
+.attribution a{
+
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+
+    color: var(--white);
+}
+
+/*media queries*/
+
+@media only screen and (max-width: 915px){
+
+.container{
+
+    width: 75%;
+}
+
+p,span,i{
+
+    font-size: 14px;
+}
+
+.img-container{
+
+    max-height: 240px;
+}
+
+.img-overlay{
+
+    max-height: inherit;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 915px){
+
+    .container{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 280px){
+
+    .container{
+        width: 85%;
+    }
+    p,span,i{
+
+        font-size: 9px;
+    }
+}
+
+
